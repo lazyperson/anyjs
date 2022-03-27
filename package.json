@@ -1,0 +1,13 @@
+{
+  "name": "anyjs",
+  "version": "1.0.0",
+  "description": "micro project",
+  "main": "index.js",
+  "scripts": {
+    
+  },
+  "author": "lazyperson",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}
