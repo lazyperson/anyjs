@@ -13,3 +13,6 @@ export const filterApp = (key, value) => {
     const currentApp = getMicroAppList().filter(item => item[key] === value);
     return currentApp && currentApp.length ? currentApp[0] : { };
 }
+
+
+export const fetchResource = url => fetch(url).then(async res => await res.text());
