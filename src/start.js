@@ -1,10 +1,10 @@
 import { getMicroAppList, setMicroAppList } from './const/microApps';
-import { setLifecycle } from './const/lifeCycle';
+import { setMainLifecycle } from './const/mainLifeCycle';
 import { currentApp } from './util';
 
 export const registerMicroApps = (appList, lifeCycle) => {
     setMicroAppList(appList);
-    setLifecycle(lifeCycle);
+    setMainLifecycle(lifeCycle);
 };
 
 export const start = () => {
