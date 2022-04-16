@@ -1,16 +1,16 @@
-import { findAppByRoute } from '../util';
+import { findAppByRoute } from '../utils';
 import { getMainLifecycle } from '../const/mainLifeCycle';
 import { loadHtml } from '../loader';
 
 export const lifecycle = async () => {
-  // 获取到上一个子应用
-  const prevApp = findAppByRoute(window.__$ANYJS_ORIGIN_MICRO_APP__);
+
+  const prevApp = findAppByRoute(window.__ORIGIN_APP__);
 
   // 获取到要跳转到的子应用
-  const nextApp = findAppByRoute(window.__$ANYJS_CURRENT_MICRO_APP__);
+  const nextApp = findAppByRoute(window.__CURRENT_SUB_APP__);
 
   if (!nextApp) {
-    return
+    return;
   }
 
   if (prevApp && prevApp.unmount) {
@@ -43,16 +43,16 @@ export const mounted = async (app) => {
   });
 
   await runMainLifeCycle('mounted');
-};
+}
 
 export const destoryed = async (app) => {
   app && app.unmount && app.unmount();
 
   await runMainLifeCycle('destoryed');
-};
+}
 
 export const runMainLifeCycle = async (type) => {
   const mainlife = getMainLifecycle();
 
   await Promise.all(mainlife[type].map(async item => await item()));
-};
+}

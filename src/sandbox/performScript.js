@@ -2,7 +2,6 @@
 // 执行js脚本
 export const performScriptForFunction = (script, appName, global) => {
   window.proxy = global;
-
   const scriptText = `
     return ((window) => {
       ${script}

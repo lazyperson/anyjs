@@ -1,5 +1,5 @@
-let mainLifeCycle = { };
+let lifecycle = {};
 
-export const getMainLifecycle = () => mainLifeCycle;
+export const getMainLifecycle = () => lifecycle;
 
-export const setMainLifecycle = data => mainLifeCycle = data;
+export const setMainLifecycle = data => lifecycle = data;
