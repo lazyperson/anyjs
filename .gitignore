@@ -26,3 +26,11 @@ node_modules/
 # lock
 package-lock.json
 yarn.lock
+
+# build output
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db

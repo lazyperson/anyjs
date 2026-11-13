@@ -1,0 +1,8 @@
+{
+  "name": "anyjs-example-react",
+  "version": "1.0.0",
+  "description": "anyjs React 子应用示例（纯 ES 模块，无需构建）",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

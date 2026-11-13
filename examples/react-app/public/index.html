@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React 子应用 - anyjs</title>
+</head>
+<body>
+  <!-- 子应用自己的内容，anyjs 会把 outerHTML 拿到主应用中渲染 -->
+  <div id="react-root">
+    <div class="react-app" style="padding:20px;font-family:sans-serif;">
+      <h2 style="color:#61dafb;">⚛️ React 子应用</h2>
+      <p style="color:#999;">正在加载...</p>
+    </div>
+  </div>
+
+  <!-- 子应用入口脚本：anyjs 会提取此脚本在沙箱中执行 -->
+  <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>anyjs 微前端主应用</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; }
+    .header {
+      background: #2c3e50;
+      color: #fff;
+      padding: 0 24px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .header h1 { font-size: 18px; margin-right: 32px; }
+    .nav { display: flex; gap: 16px; }
+    .nav a {
+      color: #ecf0f1;
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    .nav a:hover, .nav a.active { background: #34495e; }
+    .container { padding: 24px; min-height: calc(100vh - 56px); }
+    #react-container, #vue-container { border: 1px dashed #bdc3c7; border-radius: 8px; min-height: 300px; padding: 16px; }
+    .status-bar {
+      background: #f8f9fa;
+      padding: 8px 24px;
+      font-size: 12px;
+      color: #7f8c8d;
+      border-bottom: 1px solid #ecf0f1;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>anyjs 微前端演示</h1>
+    <nav class="nav">
+      <a href="/react" data-route="/react">React 子应用</a>
+      <a href="/vue" data-route="/vue">Vue 子应用</a>
+    </nav>
+  </div>
+
+  <div class="status-bar">
+    当前激活的子应用：<span id="active-app">无</span>
+  </div>
+
+  <div class="container">
+    <div id="react-container"></div>
+    <div id="vue-container"></div>
+  </div>
+</body>
+</html>

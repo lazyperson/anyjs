@@ -1,13 +1,50 @@
 {
   "name": "anyjs",
-  "version": "1.0.0",
-  "description": "micro project",
-  "main": "index.js",
+  "version": "2.0.0",
+  "description": "A lightweight, production-ready micro-frontend framework with sandbox isolation, style isolation, and global state management.",
+  "main": "dist/anyjs.cjs.js",
+  "module": "dist/anyjs.esm.js",
+  "browser": "dist/anyjs.umd.js",
   "scripts": {
-    
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
   },
+  "files": [
+    "dist/",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
   "author": "lazyperson",
   "license": "MIT",
-  "devDependencies": {},
-  "dependencies": {}
+  "devDependencies": {
+    "rollup": "^3.29.4",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@babel/core": "^7.23.5",
+    "@babel/preset-env": "^7.23.5"
+  },
+  "dependencies": {},
+  "keywords": [
+    "micro-frontend",
+    "microfrontend",
+    "micro-frontends",
+    "sandbox",
+    "style-isolation",
+    "anyjs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lazyperson/anyjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lazyperson/anyjs/issues"
+  },
+  "homepage": "https://github.com/lazyperson/anyjs#readme",
+  "publishConfig": {
+    "access": "public"
+  }
 }
